@@ -1,4 +1,4 @@
-# CodePenCloneCoding
+# CodePen_Clone Coding
 Card game!
 -----
 ### Date. 21/11/16
