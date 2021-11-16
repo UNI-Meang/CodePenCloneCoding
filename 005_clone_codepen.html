@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codepen-clone01</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        header {
+            flex: 1;
+        }
+
+        .section-board {
+            transform: rotateX(60deg) rotateY(-10deg) rotateZ(50deg);
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .board-item {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            transition: all .3s;
+        }
+
+        .board-item input {
+            /* position: absolute;
+            left: -9999px; */
+            /* opacity: 0; */
+            display: none;
+        }
+
+        .board-item label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .board-item input:checked+label {
+            background-color: indigo;
+            color: white;
+        }
+
+        .board-item:hover {
+            cursor: pointer;
+            /* transform: translate(3px, -10px); */
+            top: -15px;
+            left: -15px;
+        }
+
+        .board-item::after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #999;
+            width: 100px;
+            height: 100px;
+            transition: all .3s;
+        }
+
+        .board-item:hover::after {
+            top: 25px;
+            left: 25px;
+        }
+
+        .board-item:nth-child(3n) {
+            background-color: #07B2D9;
+        }
+
+        .board-item:nth-child(3n-1) {
+            background-color: #6F7302;
+        }
+
+        .board-item:nth-child(3n-2) {
+            background-color: #A66D03;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> Do you wanna play the game?👹</h1>
+    </header>
+    <section class="section-board">
+        <div class="board-item">
+            <input type="radio" name="" id="radio-1">
+            <label for="radio-1">1</label>
+        </div>
+        <div class="board-item">
+            <input type="radio" name="" id="radio-2">
+            <label for="radio-2">2</label>
+        </div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+        <div class="board-item"></div>
+    </section>
+</body>
+
+</html>
